@@ -6,6 +6,9 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
 
+
+// TODO: CREAR DELETE
+
 namespace T_Lovendo
 {
     class ConexionBD
@@ -112,6 +115,8 @@ namespace T_Lovendo
             }
 
         }
+
+
 
         public bool compruebaConexion()
         {
