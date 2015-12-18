@@ -75,7 +75,7 @@ namespace T_Lovendo
             try
             {
                 // Genero el objeto de conexión con la base de datos, estableciendo su cadena de conexión.
-
+                Console.WriteLine(query);
                 SqlConnection conn = new SqlConnection(this.cadenaConexion);
 
                 // Utilizo el objeto SqlCommand para ejecutar la acción en la BD, pasandole como parametro

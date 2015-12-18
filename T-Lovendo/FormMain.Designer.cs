@@ -31,20 +31,26 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.StatusLabel_DateTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.StatusLabel_DBConnect = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.StatusLabel_status = new System.Windows.Forms.ToolStripStatusLabel();
             this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.tabPage_Product = new System.Windows.Forms.TabPage();
             this.groupBox_Search = new System.Windows.Forms.GroupBox();
+            this.button_Product_refresh = new System.Windows.Forms.Button();
+            this.label_product_prov_filter = new System.Windows.Forms.Label();
             this.comboBox_Product_Provider = new System.Windows.Forms.ComboBox();
             this.comboBox_Status = new System.Windows.Forms.ComboBox();
             this.label_Filter = new System.Windows.Forms.Label();
             this.textBox_Prroduct_Search = new System.Windows.Forms.TextBox();
             this.label_Search = new System.Windows.Forms.Label();
             this.groupBox_Product = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox_Product_status = new System.Windows.Forms.ComboBox();
+            this.button_Product_edit = new System.Windows.Forms.Button();
+            this.button_Product_new = new System.Windows.Forms.Button();
+            this.button_Product_delete = new System.Windows.Forms.Button();
             this.label_sellValue = new System.Windows.Forms.Label();
             this.label_Provider = new System.Windows.Forms.Label();
             this.label_Status = new System.Windows.Forms.Label();
@@ -56,7 +62,6 @@
             this.label_Code = new System.Windows.Forms.Label();
             this.textBox_sellValue = new System.Windows.Forms.TextBox();
             this.textBox_Provider = new System.Windows.Forms.TextBox();
-            this.textBox_Status = new System.Windows.Forms.TextBox();
             this.textBox_stockMax = new System.Windows.Forms.TextBox();
             this.textBox_stockMin = new System.Windows.Forms.TextBox();
             this.textBox_Stock = new System.Windows.Forms.TextBox();
@@ -66,19 +71,40 @@
             this.dataGridView_Product = new System.Windows.Forms.DataGridView();
             this.tabControl_Main = new System.Windows.Forms.TabControl();
             this.tabPage_Provider = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button_Provider_edit_save = new System.Windows.Forms.Button();
+            this.button_Provider_new = new System.Windows.Forms.Button();
+            this.button_Provider_del_can = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox_Provider_dv = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label_Provider_lname = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label_rut = new System.Windows.Forms.Label();
+            this.textBox_Provider_desc = new System.Windows.Forms.TextBox();
+            this.textBox_Provider_phone = new System.Windows.Forms.TextBox();
+            this.textBox_Provider_address = new System.Windows.Forms.TextBox();
+            this.textBox_Provider_lastname = new System.Windows.Forms.TextBox();
+            this.textBox_Provider_name = new System.Windows.Forms.TextBox();
+            this.textBox_Provider_rut = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button_Provider_reset = new System.Windows.Forms.Button();
+            this.textBox_Provider_search = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.dataGridView_Provider = new System.Windows.Forms.DataGridView();
             this.tabPage_Ranking = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button_Product_price = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBox_Filter_price = new System.Windows.Forms.ComboBox();
+            this.dataGridView_Price = new System.Windows.Forms.DataGridView();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button_Product_stock = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.button_Product_refresh = new System.Windows.Forms.Button();
-            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.comboBox_Filter_stock = new System.Windows.Forms.ComboBox();
+            this.dataGridView_Stock = new System.Windows.Forms.DataGridView();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             this.tabPage_Product.SuspendLayout();
@@ -87,8 +113,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product)).BeginInit();
             this.tabControl_Main.SuspendLayout();
             this.tabPage_Provider.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Provider)).BeginInit();
+            this.tabPage_Ranking.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Price)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Stock)).BeginInit();
             this.SuspendLayout();
             // 
             // StatusLabel_DateTime
@@ -115,6 +147,14 @@
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(397, 17);
+            this.toolStripStatusLabel1.Spring = true;
+            this.toolStripStatusLabel1.Text = "status_bar_msg";
+            this.toolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // StatusLabel_DBConnect
             // 
             this.StatusLabel_DBConnect.Name = "StatusLabel_DBConnect";
@@ -123,6 +163,11 @@
             this.StatusLabel_DBConnect.Spring = true;
             this.StatusLabel_DBConnect.Text = "DBConnect:";
             this.StatusLabel_DBConnect.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // toolStripStatusLabel3
+            // 
+            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(0, 17);
             // 
             // StatusLabel_status
             // 
@@ -161,7 +206,7 @@
             // groupBox_Search
             // 
             this.groupBox_Search.Controls.Add(this.button_Product_refresh);
-            this.groupBox_Search.Controls.Add(this.label3);
+            this.groupBox_Search.Controls.Add(this.label_product_prov_filter);
             this.groupBox_Search.Controls.Add(this.comboBox_Product_Provider);
             this.groupBox_Search.Controls.Add(this.comboBox_Status);
             this.groupBox_Search.Controls.Add(this.label_Filter);
@@ -172,6 +217,27 @@
             this.groupBox_Search.Size = new System.Drawing.Size(872, 59);
             this.groupBox_Search.TabIndex = 2;
             this.groupBox_Search.TabStop = false;
+            // 
+            // button_Product_refresh
+            // 
+            this.button_Product_refresh.Location = new System.Drawing.Point(810, 19);
+            this.button_Product_refresh.Name = "button_Product_refresh";
+            this.button_Product_refresh.Size = new System.Drawing.Size(56, 27);
+            this.button_Product_refresh.TabIndex = 7;
+            this.button_Product_refresh.Text = "Reset";
+            this.button_Product_refresh.UseVisualStyleBackColor = true;
+            this.button_Product_refresh.Click += new System.EventHandler(this.button_Product_refresh_Click);
+            // 
+            // label_product_prov_filter
+            // 
+            this.label_product_prov_filter.AutoSize = true;
+            this.label_product_prov_filter.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_product_prov_filter.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_product_prov_filter.Location = new System.Drawing.Point(522, 24);
+            this.label_product_prov_filter.Name = "label_product_prov_filter";
+            this.label_product_prov_filter.Size = new System.Drawing.Size(71, 17);
+            this.label_product_prov_filter.TabIndex = 6;
+            this.label_product_prov_filter.Text = "Proveedor";
             // 
             // comboBox_Product_Provider
             // 
@@ -191,15 +257,15 @@
             // 
             this.comboBox_Status.BackColor = System.Drawing.Color.White;
             this.comboBox_Status.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_Status.FormattingEnabled = true;
             this.comboBox_Status.Items.AddRange(new object[] {
-            "    Todos",
-            "   Vigentes",
-            "No Vigentes"});
+            "Inactivos",
+            "Activos",
+            "Todos"});
             this.comboBox_Status.Location = new System.Drawing.Point(393, 19);
             this.comboBox_Status.Name = "comboBox_Status";
             this.comboBox_Status.Size = new System.Drawing.Size(108, 28);
             this.comboBox_Status.TabIndex = 4;
+            this.comboBox_Status.SelectedIndexChanged += new System.EventHandler(this.comboBox_Status_SelectedIndexChanged);
             // 
             // label_Filter
             // 
@@ -231,9 +297,11 @@
             // 
             // groupBox_Product
             // 
-            this.groupBox_Product.Controls.Add(this.button3);
-            this.groupBox_Product.Controls.Add(this.button2);
-            this.groupBox_Product.Controls.Add(this.button1);
+            this.groupBox_Product.Controls.Add(this.label1);
+            this.groupBox_Product.Controls.Add(this.comboBox_Product_status);
+            this.groupBox_Product.Controls.Add(this.button_Product_edit);
+            this.groupBox_Product.Controls.Add(this.button_Product_new);
+            this.groupBox_Product.Controls.Add(this.button_Product_delete);
             this.groupBox_Product.Controls.Add(this.label_sellValue);
             this.groupBox_Product.Controls.Add(this.label_Provider);
             this.groupBox_Product.Controls.Add(this.label_Status);
@@ -245,7 +313,6 @@
             this.groupBox_Product.Controls.Add(this.label_Code);
             this.groupBox_Product.Controls.Add(this.textBox_sellValue);
             this.groupBox_Product.Controls.Add(this.textBox_Provider);
-            this.groupBox_Product.Controls.Add(this.textBox_Status);
             this.groupBox_Product.Controls.Add(this.textBox_stockMax);
             this.groupBox_Product.Controls.Add(this.textBox_stockMin);
             this.groupBox_Product.Controls.Add(this.textBox_Stock);
@@ -258,42 +325,64 @@
             this.groupBox_Product.TabIndex = 1;
             this.groupBox_Product.TabStop = false;
             // 
-            // button3
+            // label1
             // 
-            this.button3.Location = new System.Drawing.Point(110, 420);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(92, 41);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 496);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(201, 17);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "**Valor Venta: 30% Valor Compra";
             // 
-            // button2
+            // comboBox_Product_status
             // 
-            this.button2.Location = new System.Drawing.Point(181, 373);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 41);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.comboBox_Product_status.Items.AddRange(new object[] {
+            "Inactivo",
+            "Activo"});
+            this.comboBox_Product_status.Location = new System.Drawing.Point(128, 292);
+            this.comboBox_Product_status.Name = "comboBox_Product_status";
+            this.comboBox_Product_status.Size = new System.Drawing.Size(150, 25);
+            this.comboBox_Product_status.TabIndex = 6;
             // 
-            // button1
+            // button_Product_edit
             // 
-            this.button1.Location = new System.Drawing.Point(45, 373);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 41);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_Product_edit.Location = new System.Drawing.Point(128, 373);
+            this.button_Product_edit.Name = "button_Product_edit";
+            this.button_Product_edit.Size = new System.Drawing.Size(70, 31);
+            this.button_Product_edit.TabIndex = 5;
+            this.button_Product_edit.Text = "Editar";
+            this.button_Product_edit.UseVisualStyleBackColor = true;
+            this.button_Product_edit.Click += new System.EventHandler(this.button_Product_edit_Click);
+            // 
+            // button_Product_new
+            // 
+            this.button_Product_new.Location = new System.Drawing.Point(128, 421);
+            this.button_Product_new.Name = "button_Product_new";
+            this.button_Product_new.Size = new System.Drawing.Size(150, 28);
+            this.button_Product_new.TabIndex = 4;
+            this.button_Product_new.Text = "Nuevo Producto";
+            this.button_Product_new.UseVisualStyleBackColor = true;
+            this.button_Product_new.Click += new System.EventHandler(this.button_Product_new_Click);
+            // 
+            // button_Product_delete
+            // 
+            this.button_Product_delete.Location = new System.Drawing.Point(208, 373);
+            this.button_Product_delete.Name = "button_Product_delete";
+            this.button_Product_delete.Size = new System.Drawing.Size(70, 31);
+            this.button_Product_delete.TabIndex = 3;
+            this.button_Product_delete.Text = "Eliminar";
+            this.button_Product_delete.UseVisualStyleBackColor = true;
+            this.button_Product_delete.Click += new System.EventHandler(this.button_Product_delete_Click);
             // 
             // label_sellValue
             // 
             this.label_sellValue.AutoSize = true;
             this.label_sellValue.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_sellValue.Location = new System.Drawing.Point(43, 156);
+            this.label_sellValue.Location = new System.Drawing.Point(30, 156);
             this.label_sellValue.Name = "label_sellValue";
-            this.label_sellValue.Size = new System.Drawing.Size(79, 17);
+            this.label_sellValue.Size = new System.Drawing.Size(91, 17);
             this.label_sellValue.TabIndex = 1;
-            this.label_sellValue.Text = "Valor Venta";
+            this.label_sellValue.Text = "**Valor Venta";
             // 
             // label_Provider
             // 
@@ -380,63 +469,57 @@
             this.textBox_sellValue.Location = new System.Drawing.Point(128, 156);
             this.textBox_sellValue.Name = "textBox_sellValue";
             this.textBox_sellValue.ReadOnly = true;
-            this.textBox_sellValue.Size = new System.Drawing.Size(145, 25);
+            this.textBox_sellValue.Size = new System.Drawing.Size(150, 25);
             this.textBox_sellValue.TabIndex = 0;
             // 
             // textBox_Provider
             // 
             this.textBox_Provider.Location = new System.Drawing.Point(128, 323);
             this.textBox_Provider.Name = "textBox_Provider";
-            this.textBox_Provider.Size = new System.Drawing.Size(145, 25);
+            this.textBox_Provider.Size = new System.Drawing.Size(150, 25);
             this.textBox_Provider.TabIndex = 0;
-            // 
-            // textBox_Status
-            // 
-            this.textBox_Status.Location = new System.Drawing.Point(128, 292);
-            this.textBox_Status.Name = "textBox_Status";
-            this.textBox_Status.Size = new System.Drawing.Size(145, 25);
-            this.textBox_Status.TabIndex = 0;
             // 
             // textBox_stockMax
             // 
             this.textBox_stockMax.Location = new System.Drawing.Point(128, 258);
             this.textBox_stockMax.Name = "textBox_stockMax";
-            this.textBox_stockMax.Size = new System.Drawing.Size(145, 25);
+            this.textBox_stockMax.Size = new System.Drawing.Size(150, 25);
             this.textBox_stockMax.TabIndex = 0;
             // 
             // textBox_stockMin
             // 
             this.textBox_stockMin.Location = new System.Drawing.Point(128, 224);
             this.textBox_stockMin.Name = "textBox_stockMin";
-            this.textBox_stockMin.Size = new System.Drawing.Size(145, 25);
+            this.textBox_stockMin.Size = new System.Drawing.Size(150, 25);
             this.textBox_stockMin.TabIndex = 0;
             // 
             // textBox_Stock
             // 
             this.textBox_Stock.Location = new System.Drawing.Point(128, 190);
             this.textBox_Stock.Name = "textBox_Stock";
-            this.textBox_Stock.Size = new System.Drawing.Size(145, 25);
+            this.textBox_Stock.Size = new System.Drawing.Size(150, 25);
             this.textBox_Stock.TabIndex = 0;
             // 
             // textBox_buyValue
             // 
             this.textBox_buyValue.Location = new System.Drawing.Point(128, 122);
             this.textBox_buyValue.Name = "textBox_buyValue";
-            this.textBox_buyValue.Size = new System.Drawing.Size(145, 25);
+            this.textBox_buyValue.Size = new System.Drawing.Size(150, 25);
             this.textBox_buyValue.TabIndex = 0;
+            this.textBox_buyValue.Leave += new System.EventHandler(this.textBox_buyValue_Leave);
             // 
             // textBox_Description
             // 
             this.textBox_Description.Location = new System.Drawing.Point(128, 88);
             this.textBox_Description.Name = "textBox_Description";
-            this.textBox_Description.Size = new System.Drawing.Size(145, 25);
+            this.textBox_Description.Size = new System.Drawing.Size(150, 25);
             this.textBox_Description.TabIndex = 0;
             // 
             // textBox_Code
             // 
             this.textBox_Code.Location = new System.Drawing.Point(128, 54);
             this.textBox_Code.Name = "textBox_Code";
-            this.textBox_Code.Size = new System.Drawing.Size(145, 25);
+            this.textBox_Code.Size = new System.Drawing.Size(150, 25);
             this.textBox_Code.TabIndex = 0;
             // 
             // dataGridView_Product
@@ -462,7 +545,7 @@
             this.tabControl_Main.Controls.Add(this.tabPage_Product);
             this.tabControl_Main.Controls.Add(this.tabPage_Ranking);
             this.tabControl_Main.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl_Main.Location = new System.Drawing.Point(2, 33);
+            this.tabControl_Main.Location = new System.Drawing.Point(3, 35);
             this.tabControl_Main.Multiline = true;
             this.tabControl_Main.Name = "tabControl_Main";
             this.tabControl_Main.Padding = new System.Drawing.Point(16, 4);
@@ -471,11 +554,12 @@
             this.tabControl_Main.SelectedIndex = 0;
             this.tabControl_Main.Size = new System.Drawing.Size(1223, 574);
             this.tabControl_Main.TabIndex = 1;
+            this.tabControl_Main.SelectedIndexChanged += new System.EventHandler(this.tabControl_Main_SelectedIndexChanged);
             // 
             // tabPage_Provider
             // 
-            this.tabPage_Provider.Controls.Add(this.groupBox1);
             this.tabPage_Provider.Controls.Add(this.groupBox2);
+            this.tabPage_Provider.Controls.Add(this.groupBox1);
             this.tabPage_Provider.Controls.Add(this.dataGridView_Provider);
             this.tabPage_Provider.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage_Provider.Location = new System.Drawing.Point(4, 32);
@@ -487,12 +571,184 @@
             this.tabPage_Provider.Text = "Proveedores";
             this.tabPage_Provider.UseVisualStyleBackColor = true;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.button_Provider_edit_save);
+            this.groupBox2.Controls.Add(this.button_Provider_new);
+            this.groupBox2.Controls.Add(this.button_Provider_del_can);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.textBox_Provider_dv);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label_Provider_lname);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.label_rut);
+            this.groupBox2.Controls.Add(this.textBox_Provider_desc);
+            this.groupBox2.Controls.Add(this.textBox_Provider_phone);
+            this.groupBox2.Controls.Add(this.textBox_Provider_address);
+            this.groupBox2.Controls.Add(this.textBox_Provider_lastname);
+            this.groupBox2.Controls.Add(this.textBox_Provider_name);
+            this.groupBox2.Controls.Add(this.textBox_Provider_rut);
+            this.groupBox2.Location = new System.Drawing.Point(885, 0);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(323, 527);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            // 
+            // button_Provider_edit_save
+            // 
+            this.button_Provider_edit_save.Location = new System.Drawing.Point(128, 267);
+            this.button_Provider_edit_save.Name = "button_Provider_edit_save";
+            this.button_Provider_edit_save.Size = new System.Drawing.Size(70, 31);
+            this.button_Provider_edit_save.TabIndex = 9;
+            this.button_Provider_edit_save.Text = "Editar";
+            this.button_Provider_edit_save.UseVisualStyleBackColor = true;
+            this.button_Provider_edit_save.Click += new System.EventHandler(this.button_Provider_edit_save_Click);
+            // 
+            // button_Provider_new
+            // 
+            this.button_Provider_new.Location = new System.Drawing.Point(128, 315);
+            this.button_Provider_new.Name = "button_Provider_new";
+            this.button_Provider_new.Size = new System.Drawing.Size(150, 28);
+            this.button_Provider_new.TabIndex = 8;
+            this.button_Provider_new.Text = "Nuevo Producto";
+            this.button_Provider_new.UseVisualStyleBackColor = true;
+            this.button_Provider_new.Click += new System.EventHandler(this.button_Provider_new_Click);
+            // 
+            // button_Provider_del_can
+            // 
+            this.button_Provider_del_can.Location = new System.Drawing.Point(208, 267);
+            this.button_Provider_del_can.Name = "button_Provider_del_can";
+            this.button_Provider_del_can.Size = new System.Drawing.Size(70, 31);
+            this.button_Provider_del_can.TabIndex = 7;
+            this.button_Provider_del_can.Text = "Eliminar";
+            this.button_Provider_del_can.UseVisualStyleBackColor = true;
+            this.button_Provider_del_can.Click += new System.EventHandler(this.button_Provider_del_can_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(227, 55);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(17, 21);
+            this.label12.TabIndex = 6;
+            this.label12.Text = "-";
+            // 
+            // textBox_Provider_dv
+            // 
+            this.textBox_Provider_dv.Location = new System.Drawing.Point(246, 54);
+            this.textBox_Provider_dv.Name = "textBox_Provider_dv";
+            this.textBox_Provider_dv.Size = new System.Drawing.Size(32, 25);
+            this.textBox_Provider_dv.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(42, 156);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 17);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Descripcion";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(40, 227);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(82, 17);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "N° Contacto";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(56, 190);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(66, 17);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Direccion";
+            // 
+            // label_Provider_lname
+            // 
+            this.label_Provider_lname.AutoSize = true;
+            this.label_Provider_lname.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Provider_lname.Location = new System.Drawing.Point(56, 122);
+            this.label_Provider_lname.Name = "label_Provider_lname";
+            this.label_Provider_lname.Size = new System.Drawing.Size(66, 17);
+            this.label_Provider_lname.TabIndex = 1;
+            this.label_Provider_lname.Text = "Apellidos";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(58, 88);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(64, 17);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Nombres";
+            // 
+            // label_rut
+            // 
+            this.label_rut.AutoSize = true;
+            this.label_rut.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_rut.Location = new System.Drawing.Point(93, 54);
+            this.label_rut.Name = "label_rut";
+            this.label_rut.Size = new System.Drawing.Size(29, 17);
+            this.label_rut.TabIndex = 1;
+            this.label_rut.Text = "Rut";
+            // 
+            // textBox_Provider_desc
+            // 
+            this.textBox_Provider_desc.Location = new System.Drawing.Point(128, 156);
+            this.textBox_Provider_desc.Name = "textBox_Provider_desc";
+            this.textBox_Provider_desc.Size = new System.Drawing.Size(150, 25);
+            this.textBox_Provider_desc.TabIndex = 0;
+            // 
+            // textBox_Provider_phone
+            // 
+            this.textBox_Provider_phone.Location = new System.Drawing.Point(128, 224);
+            this.textBox_Provider_phone.Name = "textBox_Provider_phone";
+            this.textBox_Provider_phone.Size = new System.Drawing.Size(150, 25);
+            this.textBox_Provider_phone.TabIndex = 0;
+            // 
+            // textBox_Provider_address
+            // 
+            this.textBox_Provider_address.Location = new System.Drawing.Point(128, 190);
+            this.textBox_Provider_address.Name = "textBox_Provider_address";
+            this.textBox_Provider_address.Size = new System.Drawing.Size(150, 25);
+            this.textBox_Provider_address.TabIndex = 0;
+            // 
+            // textBox_Provider_lastname
+            // 
+            this.textBox_Provider_lastname.Location = new System.Drawing.Point(128, 122);
+            this.textBox_Provider_lastname.Name = "textBox_Provider_lastname";
+            this.textBox_Provider_lastname.Size = new System.Drawing.Size(150, 25);
+            this.textBox_Provider_lastname.TabIndex = 0;
+            // 
+            // textBox_Provider_name
+            // 
+            this.textBox_Provider_name.Location = new System.Drawing.Point(128, 88);
+            this.textBox_Provider_name.Name = "textBox_Provider_name";
+            this.textBox_Provider_name.Size = new System.Drawing.Size(150, 25);
+            this.textBox_Provider_name.TabIndex = 0;
+            // 
+            // textBox_Provider_rut
+            // 
+            this.textBox_Provider_rut.Location = new System.Drawing.Point(128, 54);
+            this.textBox_Provider_rut.Name = "textBox_Provider_rut";
+            this.textBox_Provider_rut.Size = new System.Drawing.Size(96, 25);
+            this.textBox_Provider_rut.TabIndex = 0;
+            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox3);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.button_Provider_reset);
+            this.groupBox1.Controls.Add(this.textBox_Provider_search);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(7, 0);
             this.groupBox1.Name = "groupBox1";
@@ -500,50 +756,23 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
-            // comboBox2
+            // button_Provider_reset
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.White;
-            this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "    Todos",
-            "   Vigentes",
-            "No Vigentes"});
-            this.comboBox2.Location = new System.Drawing.Point(606, 20);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(91, 28);
-            this.comboBox2.TabIndex = 5;
+            this.button_Provider_reset.Location = new System.Drawing.Point(810, 19);
+            this.button_Provider_reset.Name = "button_Provider_reset";
+            this.button_Provider_reset.Size = new System.Drawing.Size(56, 27);
+            this.button_Provider_reset.TabIndex = 8;
+            this.button_Provider_reset.Text = "Reset";
+            this.button_Provider_reset.UseVisualStyleBackColor = true;
+            this.button_Provider_reset.Click += new System.EventHandler(this.button_Provider_reset_Click);
             // 
-            // comboBox3
+            // textBox_Provider_search
             // 
-            this.comboBox3.BackColor = System.Drawing.Color.White;
-            this.comboBox3.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "    Todos",
-            "   Vigentes",
-            "No Vigentes"});
-            this.comboBox3.Location = new System.Drawing.Point(509, 20);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(91, 28);
-            this.comboBox3.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(448, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 17);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Filtros :";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(80, 21);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(267, 25);
-            this.textBox2.TabIndex = 2;
+            this.textBox_Provider_search.Location = new System.Drawing.Point(80, 21);
+            this.textBox_Provider_search.Name = "textBox_Provider_search";
+            this.textBox_Provider_search.Size = new System.Drawing.Size(267, 25);
+            this.textBox_Provider_search.TabIndex = 2;
+            this.textBox_Provider_search.TextChanged += new System.EventHandler(this.textBox_Provider_search_TextChanged);
             // 
             // label2
             // 
@@ -554,14 +783,6 @@
             this.label2.Size = new System.Drawing.Size(68, 21);
             this.label2.TabIndex = 0;
             this.label2.Text = "Buscar :";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Location = new System.Drawing.Point(885, 0);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(323, 532);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
             // 
             // dataGridView_Provider
             // 
@@ -578,9 +799,14 @@
             this.dataGridView_Provider.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_Provider.Size = new System.Drawing.Size(876, 467);
             this.dataGridView_Provider.TabIndex = 0;
+            this.dataGridView_Provider.SelectionChanged += new System.EventHandler(this.dataGridView_Provider_SelectionChanged);
             // 
             // tabPage_Ranking
             // 
+            this.tabPage_Ranking.Controls.Add(this.groupBox4);
+            this.tabPage_Ranking.Controls.Add(this.dataGridView_Price);
+            this.tabPage_Ranking.Controls.Add(this.groupBox3);
+            this.tabPage_Ranking.Controls.Add(this.dataGridView_Stock);
             this.tabPage_Ranking.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage_Ranking.Location = new System.Drawing.Point(4, 32);
             this.tabPage_Ranking.Name = "tabPage_Ranking";
@@ -591,38 +817,129 @@
             this.tabPage_Ranking.Text = "Ranking";
             this.tabPage_Ranking.UseVisualStyleBackColor = true;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.button_Product_price);
+            this.groupBox4.Controls.Add(this.label5);
+            this.groupBox4.Controls.Add(this.comboBox_Filter_price);
+            this.groupBox4.Location = new System.Drawing.Point(674, 0);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(534, 59);
+            this.groupBox4.TabIndex = 8;
+            this.groupBox4.TabStop = false;
+            // 
+            // button_Product_price
+            // 
+            this.button_Product_price.Location = new System.Drawing.Point(457, 19);
+            this.button_Product_price.Name = "button_Product_price";
+            this.button_Product_price.Size = new System.Drawing.Size(56, 27);
+            this.button_Product_price.TabIndex = 7;
+            this.button_Product_price.Text = "Reset";
+            this.button_Product_price.UseVisualStyleBackColor = true;
+            this.button_Product_price.Click += new System.EventHandler(this.button_Product_price_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label5.Location = new System.Drawing.Point(95, 24);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(41, 17);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Filtro";
+            // 
+            // comboBox_Filter_price
+            // 
+            this.comboBox_Filter_price.BackColor = System.Drawing.Color.White;
+            this.comboBox_Filter_price.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_Filter_price.FormattingEnabled = true;
+            this.comboBox_Filter_price.Items.AddRange(new object[] {
+            "Productos mas Caros",
+            "Productos mas Baratos"});
+            this.comboBox_Filter_price.Location = new System.Drawing.Point(159, 19);
+            this.comboBox_Filter_price.Name = "comboBox_Filter_price";
+            this.comboBox_Filter_price.Size = new System.Drawing.Size(190, 28);
+            this.comboBox_Filter_price.TabIndex = 5;
+            this.comboBox_Filter_price.SelectedIndexChanged += new System.EventHandler(this.comboBox_Filter_price_SelectedIndexChanged);
+            // 
+            // dataGridView_Price
+            // 
+            this.dataGridView_Price.AllowUserToAddRows = false;
+            this.dataGridView_Price.AllowUserToDeleteRows = false;
+            this.dataGridView_Price.AllowUserToResizeColumns = false;
+            this.dataGridView_Price.AllowUserToResizeRows = false;
+            this.dataGridView_Price.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_Price.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Price.Location = new System.Drawing.Point(674, 65);
+            this.dataGridView_Price.MultiSelect = false;
+            this.dataGridView_Price.Name = "dataGridView_Price";
+            this.dataGridView_Price.ReadOnly = true;
+            this.dataGridView_Price.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView_Price.Size = new System.Drawing.Size(534, 467);
+            this.dataGridView_Price.TabIndex = 4;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.button_Product_stock);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.comboBox_Filter_stock);
+            this.groupBox3.Location = new System.Drawing.Point(6, 0);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(534, 59);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            // 
+            // button_Product_stock
+            // 
+            this.button_Product_stock.Location = new System.Drawing.Point(457, 19);
+            this.button_Product_stock.Name = "button_Product_stock";
+            this.button_Product_stock.Size = new System.Drawing.Size(56, 27);
+            this.button_Product_stock.TabIndex = 7;
+            this.button_Product_stock.Text = "Reset";
+            this.button_Product_stock.UseVisualStyleBackColor = true;
+            this.button_Product_stock.Click += new System.EventHandler(this.button_Product_stock_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(522, 24);
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label3.Location = new System.Drawing.Point(95, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 17);
+            this.label3.Size = new System.Drawing.Size(41, 17);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Proveedor";
+            this.label3.Text = "Filtro";
             // 
-            // button_Product_refresh
+            // comboBox_Filter_stock
             // 
-            this.button_Product_refresh.Location = new System.Drawing.Point(810, 19);
-            this.button_Product_refresh.Name = "button_Product_refresh";
-            this.button_Product_refresh.Size = new System.Drawing.Size(56, 27);
-            this.button_Product_refresh.TabIndex = 7;
-            this.button_Product_refresh.Text = "Reset";
-            this.button_Product_refresh.UseVisualStyleBackColor = true;
-            this.button_Product_refresh.Click += new System.EventHandler(this.button_Product_refresh_Click);
+            this.comboBox_Filter_stock.BackColor = System.Drawing.Color.White;
+            this.comboBox_Filter_stock.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_Filter_stock.FormattingEnabled = true;
+            this.comboBox_Filter_stock.Items.AddRange(new object[] {
+            "Productos Bajo Stock",
+            "Productos Sobre Stock"});
+            this.comboBox_Filter_stock.Location = new System.Drawing.Point(159, 19);
+            this.comboBox_Filter_stock.Name = "comboBox_Filter_stock";
+            this.comboBox_Filter_stock.Size = new System.Drawing.Size(189, 28);
+            this.comboBox_Filter_stock.TabIndex = 5;
+            this.comboBox_Filter_stock.SelectedIndexChanged += new System.EventHandler(this.comboBox_Filter_stock_SelectedIndexChanged);
             // 
-            // toolStripStatusLabel3
+            // dataGridView_Stock
             // 
-            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(0, 17);
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(397, 17);
-            this.toolStripStatusLabel1.Spring = true;
-            this.toolStripStatusLabel1.Text = "status_bar_msg";
-            this.toolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dataGridView_Stock.AllowUserToAddRows = false;
+            this.dataGridView_Stock.AllowUserToDeleteRows = false;
+            this.dataGridView_Stock.AllowUserToResizeColumns = false;
+            this.dataGridView_Stock.AllowUserToResizeRows = false;
+            this.dataGridView_Stock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_Stock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Stock.Location = new System.Drawing.Point(6, 64);
+            this.dataGridView_Stock.MultiSelect = false;
+            this.dataGridView_Stock.Name = "dataGridView_Stock";
+            this.dataGridView_Stock.ReadOnly = true;
+            this.dataGridView_Stock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView_Stock.Size = new System.Drawing.Size(534, 467);
+            this.dataGridView_Stock.TabIndex = 1;
             // 
             // FormMain
             // 
@@ -652,9 +969,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product)).EndInit();
             this.tabControl_Main.ResumeLayout(false);
             this.tabPage_Provider.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Provider)).EndInit();
+            this.tabPage_Ranking.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Price)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Stock)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -686,7 +1012,6 @@
         private System.Windows.Forms.Label label_Code;
         private System.Windows.Forms.TextBox textBox_sellValue;
         private System.Windows.Forms.TextBox textBox_Provider;
-        private System.Windows.Forms.TextBox textBox_Status;
         private System.Windows.Forms.TextBox textBox_stockMax;
         private System.Windows.Forms.TextBox textBox_stockMin;
         private System.Windows.Forms.TextBox textBox_Stock;
@@ -697,21 +1022,48 @@
         private System.Windows.Forms.TabControl tabControl_Main;
         private System.Windows.Forms.TabPage tabPage_Provider;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox_Provider_search;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView_Provider;
         private System.Windows.Forms.TabPage tabPage_Ranking;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button_Product_delete;
+        private System.Windows.Forms.Label label_product_prov_filter;
         private System.Windows.Forms.Button button_Product_refresh;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label_Provider_lname;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label_rut;
+        private System.Windows.Forms.TextBox textBox_Provider_desc;
+        private System.Windows.Forms.TextBox textBox_Provider_phone;
+        private System.Windows.Forms.TextBox textBox_Provider_address;
+        private System.Windows.Forms.TextBox textBox_Provider_lastname;
+        private System.Windows.Forms.TextBox textBox_Provider_name;
+        private System.Windows.Forms.TextBox textBox_Provider_rut;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox_Provider_dv;
+        private System.Windows.Forms.Button button_Provider_reset;
+        private System.Windows.Forms.Button button_Product_edit;
+        private System.Windows.Forms.Button button_Product_new;
+        private System.Windows.Forms.ComboBox comboBox_Product_status;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button_Provider_edit_save;
+        private System.Windows.Forms.Button button_Provider_new;
+        private System.Windows.Forms.Button button_Provider_del_can;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button button_Product_price;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBox_Filter_price;
+        private System.Windows.Forms.DataGridView dataGridView_Price;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button button_Product_stock;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBox_Filter_stock;
+        private System.Windows.Forms.DataGridView dataGridView_Stock;
     }
 }
 

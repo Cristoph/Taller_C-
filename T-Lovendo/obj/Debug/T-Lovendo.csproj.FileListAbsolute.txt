@@ -7,3 +7,12 @@ C:\Users\Wintendo7\documents\visual studio 2012\Projects\T-Lovendo\T-Lovendo\obj
 C:\Users\Wintendo7\documents\visual studio 2012\Projects\T-Lovendo\T-Lovendo\obj\Debug\T-Lovendo.exe
 C:\Users\Wintendo7\documents\visual studio 2012\Projects\T-Lovendo\T-Lovendo\obj\Debug\T-Lovendo.pdb
 C:\Users\Wintendo7\documents\visual studio 2012\Projects\T-Lovendo\T-Lovendo\obj\Debug\T_Lovendo.FormMain.resources
+C:\Users\CALGONZALEZ\Documents\GitHub\Taller_C-Sharp\T-Lovendo\bin\Debug\T-Lovendo.exe.config
+C:\Users\CALGONZALEZ\Documents\GitHub\Taller_C-Sharp\T-Lovendo\bin\Debug\T-Lovendo.exe
+C:\Users\CALGONZALEZ\Documents\GitHub\Taller_C-Sharp\T-Lovendo\bin\Debug\T-Lovendo.pdb
+C:\Users\CALGONZALEZ\Documents\GitHub\Taller_C-Sharp\T-Lovendo\obj\Debug\T-Lovendo.csprojResolveAssemblyReference.cache
+C:\Users\CALGONZALEZ\Documents\GitHub\Taller_C-Sharp\T-Lovendo\obj\Debug\T_Lovendo.FormMain.resources
+C:\Users\CALGONZALEZ\Documents\GitHub\Taller_C-Sharp\T-Lovendo\obj\Debug\T_Lovendo.Properties.Resources.resources
+C:\Users\CALGONZALEZ\Documents\GitHub\Taller_C-Sharp\T-Lovendo\obj\Debug\T-Lovendo.csproj.GenerateResource.Cache
+C:\Users\CALGONZALEZ\Documents\GitHub\Taller_C-Sharp\T-Lovendo\obj\Debug\T-Lovendo.exe
+C:\Users\CALGONZALEZ\Documents\GitHub\Taller_C-Sharp\T-Lovendo\obj\Debug\T-Lovendo.pdb
