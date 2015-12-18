@@ -27,17 +27,17 @@ namespace T_Lovendo
         //-------------------- MAIN --------------------//
         private void FormMain_Load(object sender, EventArgs e)
         {
-            // Date in status bar
-            StatusLabel_DateTime.Text = DateTime.Now.ToLongDateString();
             // Test DBConnect
             ConexionBD cnn = new ConexionBD();
             if (cnn.compruebaConexion())
             {
                 StatusLabel_status.Text = "OK";
+                StatusLabel_status.ForeColor = Color.Green;
             }
             else
             {
                 StatusLabel_status.Text = "NOK";
+                StatusLabel_status.ForeColor = Color.Red;
             }
        
             //Inital in Ranking, fix for rigth align
@@ -65,6 +65,7 @@ namespace T_Lovendo
             dataGridView_Stock.Columns[3].Visible = false;//sellValue
             dataGridView_Stock.Columns[7].Visible = false;//status
             dataGridView_Stock.Columns[8].Visible = false;//provider
+            dataGridView_Stock.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             comboBox_Filter_stock.SelectedIndex = 0;
         }
         public void Ranking_Init_Price()
@@ -77,6 +78,7 @@ namespace T_Lovendo
             dataGridView_Price.Columns[6].Visible = false;//stockMax
             dataGridView_Price.Columns[7].Visible = false;//status
             dataGridView_Price.Columns[8].Visible = false;//provider
+            dataGridView_Price.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             comboBox_Filter_price.SelectedIndex = 0;
         }
         private void Product_Init()
@@ -91,7 +93,10 @@ namespace T_Lovendo
             product_DataTable = product.GetAll();
             dataGridView_Product.DataSource = null;
             dataGridView_Product.DataSource = product_DataTable;
-            
+            dataGridView_Product.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; //fixe size
+            dataGridView_Product.Columns[7].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; //fixe size
+
+
             //dataGridView_Product.Rows[0].Selected = false; // fix row selected in load
             clearTexBox_Product();
 
@@ -112,6 +117,10 @@ namespace T_Lovendo
             dataGridView_Provider.DataSource = null;
             dataGridView_Provider.DataSource = provider_DataTable;
 
+            dataGridView_Provider.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; //fixe size
+            dataGridView_Provider.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; //fixe size
+            dataGridView_Provider.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; //fixe size
+            
             clearTexBox_Provider();
 
             disableTexBox_Provider(true);
@@ -151,7 +160,7 @@ namespace T_Lovendo
             //textBox_sellValue.Text = a.ToString();
 
             disableTexBox_Product(true);
-            buttonSwinger_Provider("edit");
+            buttonSwinger_Product("edit");
         }
 
         
@@ -466,8 +475,8 @@ namespace T_Lovendo
             }
             else if (button_Provider_edit_save.Text == "Guardar")
             {
-                Provider provider = new Provider(int.Parse(textBox_Provider_rut.Text), char.Parse(textBox_Provider_dv.Text), textBox_Provider_name.Text, textBox_Provider_lastname.Text, 
-                                                    textBox_Description.Text, textBox_Provider_address.Text, textBox_Provider_phone.Text);
+                Provider provider = new Provider(int.Parse(textBox_Provider_rut.Text), char.Parse(textBox_Provider_dv.Text), textBox_Provider_name.Text, 
+                                                    textBox_Provider_lastname.Text, textBox_Provider_desc.Text, textBox_Provider_address.Text, textBox_Provider_phone.Text);
                 if (provider.UpdateOrInsert())
                 {
                     MessageBox.Show("Proveedor Actualizado", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -479,12 +488,54 @@ namespace T_Lovendo
         //Product sellValue Calcucale
         private void textBox_buyValue_Leave(object sender, EventArgs e)
         {
-            if (textBox_buyValue.Text != "")
+            if (textBox_buyValue.Text == "")
             {
-                int sellValue = product.sellValue_calculate(int.Parse(textBox_buyValue.Text));
-                textBox_sellValue.Text = sellValue.ToString();
+                textBox_sellValue.Text = "";
+            }else{
+            int sellValue = product.sellValue_calculate(int.Parse(textBox_buyValue.Text));
+            textBox_sellValue.Text = sellValue.ToString();
             }
         }
+
+        /// ################################ Prevent non digit press ######################
+        private void textBox_Only_Digit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            if (e.Handled = !char.IsDigit(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
+            { //ERROR digit false --> ! --> isdigit true --> e controled  nice!!! 
+                textBox.BackColor = Color.Red;
+                toolStripStatusLabel_MSG.Text = "ERROR: Este campos solo puede ser numerico!!";
+                toolStripStatusLabel_MSG.ForeColor = Color.Red;
+            }
+            else
+            {
+                textBox.BackColor = Color.White;
+                toolStripStatusLabel_MSG.Text = "";
+       
+            }
+        }
+
+        private void textBox_Leave(object sender, EventArgs e)
+        {   
+            TextBox textBox = (TextBox)sender;
+
+            if (String.IsNullOrEmpty(textBox.Text))
+            {
+                textBox.BackColor = Color.Red;
+                toolStripStatusLabel_MSG.Text = "ERROR: No se permiten campos vacios!!";
+                toolStripStatusLabel_MSG.ForeColor = Color.Red;
+            }
+            else
+            {
+                textBox.BackColor = Color.White;
+                toolStripStatusLabel_MSG.Text = "";
+            }
+
+
+        }
+
+
 
 
 

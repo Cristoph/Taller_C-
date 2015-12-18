@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            this.StatusLabel_DateTime = new System.Windows.Forms.ToolStripStatusLabel();
+            this.StatusLabel_Developer = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel_MSG = new System.Windows.Forms.ToolStripStatusLabel();
             this.StatusLabel_DBConnect = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.StatusLabel_status = new System.Windows.Forms.ToolStripStatusLabel();
@@ -123,18 +123,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Stock)).BeginInit();
             this.SuspendLayout();
             // 
-            // StatusLabel_DateTime
+            // StatusLabel_Developer
             // 
-            this.StatusLabel_DateTime.Name = "StatusLabel_DateTime";
-            this.StatusLabel_DateTime.Size = new System.Drawing.Size(397, 17);
-            this.StatusLabel_DateTime.Spring = true;
-            this.StatusLabel_DateTime.Text = "StatusLabel_DateTime";
+            this.StatusLabel_Developer.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.StatusLabel_Developer.Name = "StatusLabel_Developer";
+            this.StatusLabel_Developer.Size = new System.Drawing.Size(397, 17);
+            this.StatusLabel_Developer.Spring = true;
+            this.StatusLabel_Developer.Text = "by Vicius";
             // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.StatusLabel_DateTime,
+            this.toolStripStatusLabel_MSG,
+            this.StatusLabel_Developer,
             this.StatusLabel_DBConnect,
             this.toolStripStatusLabel3,
             this.StatusLabel_status});
@@ -147,19 +148,18 @@
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // toolStripStatusLabel1
+            // toolStripStatusLabel_MSG
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(397, 17);
-            this.toolStripStatusLabel1.Spring = true;
-            this.toolStripStatusLabel1.Text = "status_bar_msg";
-            this.toolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripStatusLabel_MSG.Name = "toolStripStatusLabel_MSG";
+            this.toolStripStatusLabel_MSG.Size = new System.Drawing.Size(387, 17);
+            this.toolStripStatusLabel_MSG.Spring = true;
+            this.toolStripStatusLabel_MSG.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // StatusLabel_DBConnect
             // 
             this.StatusLabel_DBConnect.Name = "StatusLabel_DBConnect";
             this.StatusLabel_DBConnect.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.StatusLabel_DBConnect.Size = new System.Drawing.Size(397, 17);
+            this.StatusLabel_DBConnect.Size = new System.Drawing.Size(387, 17);
             this.StatusLabel_DBConnect.Spring = true;
             this.StatusLabel_DBConnect.Text = "DBConnect:";
             this.StatusLabel_DBConnect.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -349,7 +349,7 @@
             this.button_Product_edit.Location = new System.Drawing.Point(128, 373);
             this.button_Product_edit.Name = "button_Product_edit";
             this.button_Product_edit.Size = new System.Drawing.Size(70, 31);
-            this.button_Product_edit.TabIndex = 5;
+            this.button_Product_edit.TabIndex = 8;
             this.button_Product_edit.Text = "Editar";
             this.button_Product_edit.UseVisualStyleBackColor = true;
             this.button_Product_edit.Click += new System.EventHandler(this.button_Product_edit_Click);
@@ -359,7 +359,7 @@
             this.button_Product_new.Location = new System.Drawing.Point(128, 421);
             this.button_Product_new.Name = "button_Product_new";
             this.button_Product_new.Size = new System.Drawing.Size(150, 28);
-            this.button_Product_new.TabIndex = 4;
+            this.button_Product_new.TabIndex = 10;
             this.button_Product_new.Text = "Nuevo Producto";
             this.button_Product_new.UseVisualStyleBackColor = true;
             this.button_Product_new.Click += new System.EventHandler(this.button_Product_new_Click);
@@ -369,7 +369,7 @@
             this.button_Product_delete.Location = new System.Drawing.Point(208, 373);
             this.button_Product_delete.Name = "button_Product_delete";
             this.button_Product_delete.Size = new System.Drawing.Size(70, 31);
-            this.button_Product_delete.TabIndex = 3;
+            this.button_Product_delete.TabIndex = 9;
             this.button_Product_delete.Text = "Eliminar";
             this.button_Product_delete.UseVisualStyleBackColor = true;
             this.button_Product_delete.Click += new System.EventHandler(this.button_Product_delete_Click);
@@ -470,42 +470,46 @@
             this.textBox_sellValue.Name = "textBox_sellValue";
             this.textBox_sellValue.ReadOnly = true;
             this.textBox_sellValue.Size = new System.Drawing.Size(150, 25);
-            this.textBox_sellValue.TabIndex = 0;
+            this.textBox_sellValue.TabIndex = 20;
             // 
             // textBox_Provider
             // 
             this.textBox_Provider.Location = new System.Drawing.Point(128, 323);
             this.textBox_Provider.Name = "textBox_Provider";
             this.textBox_Provider.Size = new System.Drawing.Size(150, 25);
-            this.textBox_Provider.TabIndex = 0;
+            this.textBox_Provider.TabIndex = 7;
             // 
             // textBox_stockMax
             // 
             this.textBox_stockMax.Location = new System.Drawing.Point(128, 258);
             this.textBox_stockMax.Name = "textBox_stockMax";
             this.textBox_stockMax.Size = new System.Drawing.Size(150, 25);
-            this.textBox_stockMax.TabIndex = 0;
+            this.textBox_stockMax.TabIndex = 5;
+            this.textBox_stockMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Only_Digit_KeyPress);
             // 
             // textBox_stockMin
             // 
             this.textBox_stockMin.Location = new System.Drawing.Point(128, 224);
             this.textBox_stockMin.Name = "textBox_stockMin";
             this.textBox_stockMin.Size = new System.Drawing.Size(150, 25);
-            this.textBox_stockMin.TabIndex = 0;
+            this.textBox_stockMin.TabIndex = 4;
+            this.textBox_stockMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Only_Digit_KeyPress);
             // 
             // textBox_Stock
             // 
             this.textBox_Stock.Location = new System.Drawing.Point(128, 190);
             this.textBox_Stock.Name = "textBox_Stock";
             this.textBox_Stock.Size = new System.Drawing.Size(150, 25);
-            this.textBox_Stock.TabIndex = 0;
+            this.textBox_Stock.TabIndex = 3;
+            this.textBox_Stock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Only_Digit_KeyPress);
             // 
             // textBox_buyValue
             // 
             this.textBox_buyValue.Location = new System.Drawing.Point(128, 122);
             this.textBox_buyValue.Name = "textBox_buyValue";
             this.textBox_buyValue.Size = new System.Drawing.Size(150, 25);
-            this.textBox_buyValue.TabIndex = 0;
+            this.textBox_buyValue.TabIndex = 2;
+            this.textBox_buyValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Only_Digit_KeyPress);
             this.textBox_buyValue.Leave += new System.EventHandler(this.textBox_buyValue_Leave);
             // 
             // textBox_Description
@@ -513,7 +517,7 @@
             this.textBox_Description.Location = new System.Drawing.Point(128, 88);
             this.textBox_Description.Name = "textBox_Description";
             this.textBox_Description.Size = new System.Drawing.Size(150, 25);
-            this.textBox_Description.TabIndex = 0;
+            this.textBox_Description.TabIndex = 1;
             // 
             // textBox_Code
             // 
@@ -521,6 +525,8 @@
             this.textBox_Code.Name = "textBox_Code";
             this.textBox_Code.Size = new System.Drawing.Size(150, 25);
             this.textBox_Code.TabIndex = 0;
+            this.textBox_Code.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Only_Digit_KeyPress);
+            this.textBox_Code.Leave += new System.EventHandler(this.textBox_Leave);
             // 
             // dataGridView_Product
             // 
@@ -601,7 +607,7 @@
             this.button_Provider_edit_save.Location = new System.Drawing.Point(128, 267);
             this.button_Provider_edit_save.Name = "button_Provider_edit_save";
             this.button_Provider_edit_save.Size = new System.Drawing.Size(70, 31);
-            this.button_Provider_edit_save.TabIndex = 9;
+            this.button_Provider_edit_save.TabIndex = 7;
             this.button_Provider_edit_save.Text = "Editar";
             this.button_Provider_edit_save.UseVisualStyleBackColor = true;
             this.button_Provider_edit_save.Click += new System.EventHandler(this.button_Provider_edit_save_Click);
@@ -611,7 +617,7 @@
             this.button_Provider_new.Location = new System.Drawing.Point(128, 315);
             this.button_Provider_new.Name = "button_Provider_new";
             this.button_Provider_new.Size = new System.Drawing.Size(150, 28);
-            this.button_Provider_new.TabIndex = 8;
+            this.button_Provider_new.TabIndex = 9;
             this.button_Provider_new.Text = "Nuevo Producto";
             this.button_Provider_new.UseVisualStyleBackColor = true;
             this.button_Provider_new.Click += new System.EventHandler(this.button_Provider_new_Click);
@@ -621,7 +627,7 @@
             this.button_Provider_del_can.Location = new System.Drawing.Point(208, 267);
             this.button_Provider_del_can.Name = "button_Provider_del_can";
             this.button_Provider_del_can.Size = new System.Drawing.Size(70, 31);
-            this.button_Provider_del_can.TabIndex = 7;
+            this.button_Provider_del_can.TabIndex = 8;
             this.button_Provider_del_can.Text = "Eliminar";
             this.button_Provider_del_can.UseVisualStyleBackColor = true;
             this.button_Provider_del_can.Click += new System.EventHandler(this.button_Provider_del_can_Click);
@@ -641,7 +647,7 @@
             this.textBox_Provider_dv.Location = new System.Drawing.Point(246, 54);
             this.textBox_Provider_dv.Name = "textBox_Provider_dv";
             this.textBox_Provider_dv.Size = new System.Drawing.Size(32, 25);
-            this.textBox_Provider_dv.TabIndex = 5;
+            this.textBox_Provider_dv.TabIndex = 1;
             // 
             // label4
             // 
@@ -708,35 +714,35 @@
             this.textBox_Provider_desc.Location = new System.Drawing.Point(128, 156);
             this.textBox_Provider_desc.Name = "textBox_Provider_desc";
             this.textBox_Provider_desc.Size = new System.Drawing.Size(150, 25);
-            this.textBox_Provider_desc.TabIndex = 0;
+            this.textBox_Provider_desc.TabIndex = 4;
             // 
             // textBox_Provider_phone
             // 
             this.textBox_Provider_phone.Location = new System.Drawing.Point(128, 224);
             this.textBox_Provider_phone.Name = "textBox_Provider_phone";
             this.textBox_Provider_phone.Size = new System.Drawing.Size(150, 25);
-            this.textBox_Provider_phone.TabIndex = 0;
+            this.textBox_Provider_phone.TabIndex = 6;
             // 
             // textBox_Provider_address
             // 
             this.textBox_Provider_address.Location = new System.Drawing.Point(128, 190);
             this.textBox_Provider_address.Name = "textBox_Provider_address";
             this.textBox_Provider_address.Size = new System.Drawing.Size(150, 25);
-            this.textBox_Provider_address.TabIndex = 0;
+            this.textBox_Provider_address.TabIndex = 5;
             // 
             // textBox_Provider_lastname
             // 
             this.textBox_Provider_lastname.Location = new System.Drawing.Point(128, 122);
             this.textBox_Provider_lastname.Name = "textBox_Provider_lastname";
             this.textBox_Provider_lastname.Size = new System.Drawing.Size(150, 25);
-            this.textBox_Provider_lastname.TabIndex = 0;
+            this.textBox_Provider_lastname.TabIndex = 3;
             // 
             // textBox_Provider_name
             // 
             this.textBox_Provider_name.Location = new System.Drawing.Point(128, 88);
             this.textBox_Provider_name.Name = "textBox_Provider_name";
             this.textBox_Provider_name.Size = new System.Drawing.Size(150, 25);
-            this.textBox_Provider_name.TabIndex = 0;
+            this.textBox_Provider_name.TabIndex = 2;
             // 
             // textBox_Provider_rut
             // 
@@ -744,6 +750,7 @@
             this.textBox_Provider_rut.Name = "textBox_Provider_rut";
             this.textBox_Provider_rut.Size = new System.Drawing.Size(96, 25);
             this.textBox_Provider_rut.TabIndex = 0;
+            this.textBox_Provider_rut.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Only_Digit_KeyPress);
             // 
             // groupBox1
             // 
@@ -933,7 +940,7 @@
             this.dataGridView_Stock.AllowUserToResizeRows = false;
             this.dataGridView_Stock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_Stock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Stock.Location = new System.Drawing.Point(6, 64);
+            this.dataGridView_Stock.Location = new System.Drawing.Point(3, 65);
             this.dataGridView_Stock.MultiSelect = false;
             this.dataGridView_Stock.Name = "dataGridView_Stock";
             this.dataGridView_Stock.ReadOnly = true;
@@ -988,7 +995,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ToolStripStatusLabel StatusLabel_DateTime;
+        private System.Windows.Forms.ToolStripStatusLabel StatusLabel_Developer;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel StatusLabel_DBConnect;
         private System.Windows.Forms.ToolStripStatusLabel StatusLabel_status;
@@ -1030,7 +1037,7 @@
         private System.Windows.Forms.Label label_product_prov_filter;
         private System.Windows.Forms.Button button_Product_refresh;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel_MSG;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
