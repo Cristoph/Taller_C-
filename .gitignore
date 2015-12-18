@@ -231,3 +231,4 @@ _Pvt_Extensions
 # FAKE - F# Make
 .fake/
 T-Lovendo.v11.suo
+*.cache
