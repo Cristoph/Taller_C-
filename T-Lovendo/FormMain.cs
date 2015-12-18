@@ -101,9 +101,13 @@ namespace T_Lovendo
             clearTexBox_Product();
 
             disableTexBox_Product(true);
-            
             comboBox_Status.SelectedIndex = 2; //todos
             //comboBox_Product_Provider.SelectedIndex = 0;
+            
+            comboBox_Prod_Provider.DataSource = provider.GetAll_ID();
+            comboBox_Prod_Provider.ValueMember = "rut";
+            comboBox_Prod_Provider.DisplayMember = "rut";
+            comboBox_Prod_Provider.ResetText();
             
             textBox_Prroduct_Search.Clear();
             textBox_Prroduct_Search.Focus();
@@ -143,8 +147,9 @@ namespace T_Lovendo
                 textBox_Stock.Text = row.Cells[4].Value.ToString();
                 textBox_stockMin.Text = row.Cells[5].Value.ToString();
                 textBox_stockMax.Text = row.Cells[6].Value.ToString();
+                comboBox_Product_status.ResetText();
                 if(row.Cells[7].Value.ToString() == "True"){
-                    comboBox_Product_status.SelectedIndex = 1;
+                     comboBox_Product_status.SelectedIndex = 1;
                 }
                 //else if (row.Cells[7].Value.ToString() == "False")
                 else
@@ -152,8 +157,8 @@ namespace T_Lovendo
                     comboBox_Product_status.SelectedIndex = 0;
                 }
                 //Console.WriteLine("cell: {0} - comb: {1}", row.Cells[7].Value, comboBox_Product_status.SelectedIndex); /// WHY??????
-           
-                textBox_Provider.Text = row.Cells[8].Value.ToString();   
+                comboBox_Prod_Provider.ResetText();
+                comboBox_Prod_Provider.SelectedText = row.Cells[8].Value.ToString();   
             }
             //double a = product.sellValue_calculate(int.Parse(textBox_buyValue.Text));
             //Console.WriteLine(a);
@@ -192,7 +197,7 @@ namespace T_Lovendo
             textBox_stockMin.ReadOnly = value;
             textBox_stockMax.ReadOnly = value;
             comboBox_Product_status.Enabled = !value;
-            textBox_Provider.ReadOnly = value;
+            comboBox_Prod_Provider.Enabled = !value;
         }
 
         private void disableTexBox_Provider(bool value)
@@ -216,7 +221,7 @@ namespace T_Lovendo
             textBox_stockMin.Clear();
             textBox_stockMax.Clear();
             comboBox_Product_status.ResetText();
-            textBox_Provider.Clear();
+            comboBox_Prod_Provider.ResetText();
         }
         private void clearTexBox_Provider()
         {
@@ -450,9 +455,10 @@ namespace T_Lovendo
 
             }else if (button_Product_edit.Text == "Guardar")
             {
+                
                 Product product= new Product(int.Parse(textBox_Code.Text), textBox_Description.Text, int.Parse(textBox_buyValue.Text), int.Parse(textBox_sellValue.Text), 
-                                            int.Parse(textBox_Stock.Text), int.Parse(textBox_stockMin.Text), int.Parse(textBox_stockMax.Text), 
-                                            comboBox_Product_status.SelectedIndex, int.Parse(textBox_Provider.Text));
+                                            int.Parse(textBox_Stock.Text), int.Parse(textBox_stockMin.Text), int.Parse(textBox_stockMax.Text),
+                                            comboBox_Product_status.SelectedIndex, int.Parse(comboBox_Prod_Provider.SelectedValue.ToString()));
                 if (product.UpdateOrInsert())
                 {
                     MessageBox.Show("Productos Actualizados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -538,6 +544,8 @@ namespace T_Lovendo
 
 
 
+
+ 
 
 
 

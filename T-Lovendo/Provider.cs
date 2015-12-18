@@ -44,6 +44,13 @@ namespace T_Lovendo
             return cnn.traerDatosBD(query);
         }
 
+        public DataTable GetAll_ID()
+        {
+            string query = "SELECT rut FROM PROVEEDOR";
+            ConexionBD cnn = new ConexionBD();
+            return cnn.traerDatosBD(query);
+        }
+
         //#### Update ior Insert
         public bool UpdateOrInsert()
         {

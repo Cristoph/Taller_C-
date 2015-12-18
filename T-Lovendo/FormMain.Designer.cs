@@ -46,6 +46,7 @@
             this.textBox_Prroduct_Search = new System.Windows.Forms.TextBox();
             this.label_Search = new System.Windows.Forms.Label();
             this.groupBox_Product = new System.Windows.Forms.GroupBox();
+            this.comboBox_Prod_Provider = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox_Product_status = new System.Windows.Forms.ComboBox();
             this.button_Product_edit = new System.Windows.Forms.Button();
@@ -61,7 +62,6 @@
             this.label_Descripcion = new System.Windows.Forms.Label();
             this.label_Code = new System.Windows.Forms.Label();
             this.textBox_sellValue = new System.Windows.Forms.TextBox();
-            this.textBox_Provider = new System.Windows.Forms.TextBox();
             this.textBox_stockMax = new System.Windows.Forms.TextBox();
             this.textBox_stockMin = new System.Windows.Forms.TextBox();
             this.textBox_Stock = new System.Windows.Forms.TextBox();
@@ -151,7 +151,7 @@
             // toolStripStatusLabel_MSG
             // 
             this.toolStripStatusLabel_MSG.Name = "toolStripStatusLabel_MSG";
-            this.toolStripStatusLabel_MSG.Size = new System.Drawing.Size(387, 17);
+            this.toolStripStatusLabel_MSG.Size = new System.Drawing.Size(397, 17);
             this.toolStripStatusLabel_MSG.Spring = true;
             this.toolStripStatusLabel_MSG.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -159,7 +159,7 @@
             // 
             this.StatusLabel_DBConnect.Name = "StatusLabel_DBConnect";
             this.StatusLabel_DBConnect.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.StatusLabel_DBConnect.Size = new System.Drawing.Size(387, 17);
+            this.StatusLabel_DBConnect.Size = new System.Drawing.Size(397, 17);
             this.StatusLabel_DBConnect.Spring = true;
             this.StatusLabel_DBConnect.Text = "DBConnect:";
             this.StatusLabel_DBConnect.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -297,6 +297,7 @@
             // 
             // groupBox_Product
             // 
+            this.groupBox_Product.Controls.Add(this.comboBox_Prod_Provider);
             this.groupBox_Product.Controls.Add(this.label1);
             this.groupBox_Product.Controls.Add(this.comboBox_Product_status);
             this.groupBox_Product.Controls.Add(this.button_Product_edit);
@@ -312,7 +313,6 @@
             this.groupBox_Product.Controls.Add(this.label_Descripcion);
             this.groupBox_Product.Controls.Add(this.label_Code);
             this.groupBox_Product.Controls.Add(this.textBox_sellValue);
-            this.groupBox_Product.Controls.Add(this.textBox_Provider);
             this.groupBox_Product.Controls.Add(this.textBox_stockMax);
             this.groupBox_Product.Controls.Add(this.textBox_stockMin);
             this.groupBox_Product.Controls.Add(this.textBox_Stock);
@@ -324,6 +324,14 @@
             this.groupBox_Product.Size = new System.Drawing.Size(323, 532);
             this.groupBox_Product.TabIndex = 1;
             this.groupBox_Product.TabStop = false;
+            // 
+            // comboBox_Prod_Provider
+            // 
+            this.comboBox_Prod_Provider.FormattingEnabled = true;
+            this.comboBox_Prod_Provider.Location = new System.Drawing.Point(129, 324);
+            this.comboBox_Prod_Provider.Name = "comboBox_Prod_Provider";
+            this.comboBox_Prod_Provider.Size = new System.Drawing.Size(149, 25);
+            this.comboBox_Prod_Provider.TabIndex = 21;
             // 
             // label1
             // 
@@ -471,13 +479,6 @@
             this.textBox_sellValue.ReadOnly = true;
             this.textBox_sellValue.Size = new System.Drawing.Size(150, 25);
             this.textBox_sellValue.TabIndex = 20;
-            // 
-            // textBox_Provider
-            // 
-            this.textBox_Provider.Location = new System.Drawing.Point(128, 323);
-            this.textBox_Provider.Name = "textBox_Provider";
-            this.textBox_Provider.Size = new System.Drawing.Size(150, 25);
-            this.textBox_Provider.TabIndex = 7;
             // 
             // textBox_stockMax
             // 
@@ -1018,7 +1019,6 @@
         private System.Windows.Forms.Label label_Descripcion;
         private System.Windows.Forms.Label label_Code;
         private System.Windows.Forms.TextBox textBox_sellValue;
-        private System.Windows.Forms.TextBox textBox_Provider;
         private System.Windows.Forms.TextBox textBox_stockMax;
         private System.Windows.Forms.TextBox textBox_stockMin;
         private System.Windows.Forms.TextBox textBox_Stock;
@@ -1071,6 +1071,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox_Filter_stock;
         private System.Windows.Forms.DataGridView dataGridView_Stock;
+        private System.Windows.Forms.ComboBox comboBox_Prod_Provider;
     }
 }
 
